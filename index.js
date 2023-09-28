@@ -21,6 +21,10 @@ function generateSpendingKey (network) {
   return zwallet.createSpendingKey(network)
 }
 
+function generateTransparentTransaction (wif, utxos, receiver, amount, network) {
+  return twallet.createTransaction(wif, utxos, receiver, amount, network)
+}
+
 // Generates the address associated with a given spending key.
 function generateAddressFromSpendingKey (key, network) {
   return zwallet.convertSpendingKeyToAddress(key, network)
